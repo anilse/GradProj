@@ -1,0 +1,23 @@
+{
+  "buildFiles": [
+    "/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/Android.mk"
+  ],
+  "cleanCommands": [
+    "/home/anilse/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/build/intermediates/ndkBuild/debug/lib clean"
+  ],
+  "libraries": {
+    "app-debug-armeabi-v7a": {
+      "buildCommand": "/home/anilse/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d1 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/build/intermediates/ndkBuild/debug/obj NDK_LIBS_OUT\u003d/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/build/intermediates/ndkBuild/debug/lib /home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libapp.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "app",
+      "files": [],
+      "output": "/home/anilse/Desktop/grad_project/20052019/wetransfer-bac2fe/grad_project/app/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libapp.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {}
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

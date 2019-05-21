@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4e21651-856d-40f6-b9ba-8bb44987e8fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../app/Android.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/copyright/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/tr/edu/ozu/multinumberdetector/DigitDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/tr/edu/ozu/multinumberdetector/DigitDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/tr/edu/ozu/multinumberdetector/ImageProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/tr/edu/ozu/multinumberdetector/ImageProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/java/tr/edu/ozu/multinumberdetector/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../app/src/main/java/tr/edu/ozu/multinumberdetector/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_calib3d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_core.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_features2d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_flann.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_highgui.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_imgcodecs.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_imgproc.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_java3.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_ml.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_objdetect.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_photo.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_shape.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_stitching.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_superres.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_video.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_videoio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/arm64-v8a/libopencv_videostab.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_calib3d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_core.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_features2d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_flann.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_highgui.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_imgcodecs.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_imgproc.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_java3.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_ml.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_objdetect.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_photo.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_shape.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_stitching.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_superres.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_video.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_videoio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/armeabi/libopencv_videostab.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_calib3d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_core.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_features2d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_flann.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_highgui.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_imgcodecs.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_imgproc.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_java3.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_ml.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_objdetect.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_photo.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_shape.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_stitching.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_superres.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_video.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_videoio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips/libopencv_videostab.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_calib3d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_core.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_features2d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_flann.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_highgui.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_imgcodecs.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_imgproc.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_java3.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_ml.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_objdetect.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_photo.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_shape.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_stitching.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_superres.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_video.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_videoio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/mips64/libopencv_videostab.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_calib3d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_core.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_features2d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_flann.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_highgui.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_imgcodecs.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_imgproc.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_java3.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_ml.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_objdetect.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_photo.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_shape.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_stitching.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_superres.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_video.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_videoio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86/libopencv_videostab.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_calib3d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_core.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_features2d.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_flann.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_highgui.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_imgcodecs.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_imgproc.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_java3.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_ml.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_objdetect.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_photo.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_shape.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_stitching.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_superres.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_video.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_videoio.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/src/main/jniLibs/x86_64/libopencv_videostab.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/generated/source/aidl/debug/org/opencv/engine/OpenCVEngineInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/generated/source/aidl/debug/org/opencv/engine/OpenCVEngineInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/generated/source/aidl/release/org/opencv/engine/OpenCVEngineInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/generated/source/aidl/release/org/opencv/engine/OpenCVEngineInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/generated/source/r/debug/org/opencv/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/generated/source/r/debug/org/opencv/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/bundles/debug/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/bundles/debug/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/bundles/release/classes.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/bundles/release/classes.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/R$attr.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/R$attr.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/R$id.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/R$id.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/R$styleable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/core/Mat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/core/Mat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/engine/OpenCVEngineInterface$Stub$Proxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/engine/OpenCVEngineInterface$Stub$Proxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/imgproc/Moments.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/debug/org/opencv/imgproc/Moments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/R$styleable.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/R$styleable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/core/Mat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/core/Mat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/engine/OpenCVEngineInterface$Stub$Proxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/engine/OpenCVEngineInterface$Stub$Proxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/imgproc/Moments.class" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/classes/release/org/opencv/imgproc/Moments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/compileDebugAidl/dependency.store" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/compileDebugAidl/dependency.store" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/compileReleaseAidl/dependency.store" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/compileReleaseAidl/dependency.store" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeReleaseAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeReleaseAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeReleaseJniLibFolders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeReleaseShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/mergeReleaseShaders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/packageReleaseResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/intermediates/incremental/packageReleaseResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/outputs/aar/openCVLibrary310-debug.aar" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/outputs/aar/openCVLibrary310-debug.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openCVLibrary310/build/outputs/aar/openCVLibrary310-release.aar" beforeDir="false" afterPath="$PROJECT_DIR$/../openCVLibrary310/build/outputs/aar/openCVLibrary310-release.aar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trainer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Trainer.ipynb" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Trainer.ipynb" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1857" />
+    <option name="height" value="1085" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="trainer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="trainer" type="JupiterNotebook" factoryName="Jupyter Notebook">
+      <module name="trainer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f4e21651-856d-40f6-b9ba-8bb44987e8fa" name="Default Changelist" comment="" />
+      <created>1553691165325</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553691165325</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25272927" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49945414" weight="0.3291536" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50054586" side_tool="true" weight="0.3291536" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Trainer.ipynb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="49" column="3" lean-forward="true" selection-start-line="49" selection-start-column="3" selection-end-line="49" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
