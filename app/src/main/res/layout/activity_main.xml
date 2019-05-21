@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="tr.edu.ozu.multinumberdetector.MainActivity">
+    tools:context="tr.edu.ozu.multinumberdetector.tr.edu.ozu.handwrittenmathexpressionsolver.MainActivity">
 
     <ImageView
         android:layout_width="wrap_content"

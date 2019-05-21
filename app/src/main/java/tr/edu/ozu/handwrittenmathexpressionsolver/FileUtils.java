@@ -1,4 +1,4 @@
-package tr.edu.ozu.multinumberdetector;
+package tr.edu.ozu.handwrittenmathexpressionsolver;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

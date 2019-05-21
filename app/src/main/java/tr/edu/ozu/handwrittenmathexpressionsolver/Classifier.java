@@ -1,4 +1,4 @@
-package tr.edu.ozu.multinumberdetector;
+package tr.edu.ozu.handwrittenmathexpressionsolver;
 
 import android.app.Activity;
 import android.content.res.AssetFileDescriptor;

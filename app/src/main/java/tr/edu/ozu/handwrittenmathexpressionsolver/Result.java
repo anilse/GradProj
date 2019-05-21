@@ -1,4 +1,4 @@
-package tr.edu.ozu.multinumberdetector;
+package tr.edu.ozu.handwrittenmathexpressionsolver;
 
 /**
 * Result of the model run is made class.
