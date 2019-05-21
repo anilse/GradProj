@@ -132,6 +132,9 @@ public class MainActivity extends AppCompatActivity {
                                     next_index = exp_index + 1;
                                 if(exp_index != 0)
                                     prev_index = exp_index - 1;
+                                // division tweak. not a good solution to detect division sign but I found it hard to reconfigure contour area of the symbol.
+                                // it always detects --- when sorted. So, a temporary solution for demo.
+                                // TO-DO: find a way to detect total contour area of div sign.
                                 if(expression.substring(exp_index, next_index).equals("-") &&
                                         (exp_index != 0) &&
                                         ((exp_index != (expression.length()- 1)) &&
