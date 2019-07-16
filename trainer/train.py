@@ -1,9 +1,9 @@
-import tensorflow as tf
 from tensorflow.keras.callbacks import LearningRateScheduler
 from tensorflow.keras.initializers import Constant
 from tensorflow.keras.layers import Input, Conv2D, BatchNormalization, Activation, Dropout, Flatten, Dense
 from tensorflow.keras.models import Model
 from tensorflow.keras.utils import to_categorical
+import tensorflow as tf
 import cv2
 import numpy as np
 import random
@@ -12,6 +12,7 @@ import os.path
 from IPython.display import clear_output
 import clock
 import math
+import matplotlib.pyplot as plt
 
 # Set Up GPU
 from tensorflow.python.client import device_lib
@@ -27,10 +28,10 @@ CLASSES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '
 NUM_CLASSES = len(CLASSES)              # The number of classes
 IMG_SIZE = 28                          # Pixel-Width of images
 BATCH_SIZE = 128	                    # The number of images to process during a single pass
-EPOCHS = 25	                            # The number of times to iterate through the entire training set
+EPOCHS = 30	                            # The number of times to iterate through the entire training set
 IMG_ROWS, IMG_COLS = IMG_SIZE, IMG_SIZE # Input Image Dimensions
 DATA_UTILIZATION = 1                    # Fraction of data which is utilized in training and testing
-TEST_RATIO = 1/3
+TEST_RATIO = 1/4
 DATA_FOLDER = "hackru"
 
 # Define function to read images from folder and convert them to gray scale
@@ -104,26 +105,26 @@ print("x_train.shape = {}, y_train.shape = {}".format(x_train.shape, y_train.sha
 print("x_test.shape = {}, y_test.shape = {}".format(x_test.shape, y_test.shape))
 inputs = Input(shape=(IMG_SIZE, IMG_SIZE, 1), name='input')
 
-x = Conv2D(32, kernel_size=(6, 6), strides=1)(inputs)
+x = Conv2D(32, kernel_size=(3, 3), strides=1)(inputs)
 x = BatchNormalization(scale=False, beta_initializer=Constant(0.01))(x)
 x = Activation('relu')(x)
-x = Dropout(rate=0.25)(x)
+x = Dropout(rate=0.1)(x)
 
-x = Conv2D(48, kernel_size=(5, 5), strides=2)(x)
+x = Conv2D(64, kernel_size=(3, 3), strides=2)(x)
 x = BatchNormalization(scale=False, beta_initializer=Constant(0.01))(x)
 x = Activation('relu')(x)
-x = Dropout(rate=0.25)(x)
+x = Dropout(rate=0.1)(x)
 
-x = Conv2D(64, kernel_size=(4, 4), strides=2)(x)
+x = Conv2D(128, kernel_size=(3, 3), strides=2)(x)
 x = BatchNormalization(scale=False, beta_initializer=Constant(0.01))(x)
 x = Activation('relu')(x)
-x = Dropout(rate=0.25)(x)
+x = Dropout(rate=0.1)(x)
 
 x = Flatten()(x)
 x = Dense(200)(x)
 x = BatchNormalization(scale=False, beta_initializer=Constant(0.01))(x)
 x = Activation('relu')(x)
-x = Dropout(rate=0.25)(x)
+x = Dropout(rate=0.1)(x)
 
 predications = Dense(NUM_CLASSES, activation='softmax', name='output')(x)
 
@@ -133,9 +134,28 @@ model.summary()
 lr_decay = lambda epoch: 0.0001 + 0.02 * math.pow(1.0 / math.e, epoch / 3.0)
 decay_callback = LearningRateScheduler(lr_decay, verbose=1)
 
-history = model.fit(x_train, y_train, batch_size=128, epochs=20, verbose=1,
+history = model.fit(x_train, y_train, batch_size=BATCH_SIZE, epochs=EPOCHS, verbose=1,
                     validation_data=(x_test, y_test), callbacks=[decay_callback])
 model.save('anil.h5')
 converter = tf.lite.TFLiteConverter.from_keras_model_file('anil.h5')
 tflite_model = converter.convert()
 open('anil.tflite', 'wb').write(tflite_model)
+
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
+# summarize history for loss
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'test'], loc='upper left')
+plt.show()
