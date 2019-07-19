@@ -1,0 +1,10 @@
+.DS_Store
+classification-task/
+hasy-data/
+*.bak
+bak
+verification-task/
+hasy_tools.py
+README.txt
+symbols.csv
+data/

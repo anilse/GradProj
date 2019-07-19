@@ -25,15 +25,15 @@ sess = tf.Session(config = config)
 
 start_time = clock.now()        # Start Timer
 
-CLASSES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13']
+CLASSES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']
 NUM_CLASSES = len(CLASSES)              # The number of classes
-IMG_SIZE = 28                          # Pixel-Width of images
+IMG_SIZE = 45                          # Pixel-Width of images
 BATCH_SIZE = 128	                    # The number of images to process during a single pass
 EPOCHS = 30	                            # The number of times to iterate through the entire training set
 IMG_ROWS, IMG_COLS = IMG_SIZE, IMG_SIZE # Input Image Dimensions
 DATA_UTILIZATION = 1                    # Fraction of data which is utilized in training and testing
 VALIDATION_SPLIT = 0.2
-DATA_FOLDER = "hackru"
+DATA_FOLDER = "real_kaggle"
 
 # Define function to read images from folder and convert them to gray scale
 def load_images_from_folder(folder):
@@ -123,10 +123,10 @@ decay_callback = LearningRateScheduler(lr_decay, verbose=1)
 
 history = model.fit(x_train, y_train, batch_size=BATCH_SIZE, epochs=EPOCHS, verbose=1,
                     validation_split=VALIDATION_SPLIT, callbacks=[decay_callback])
-model.save('anil.h5')
-converter = tf.lite.TFLiteConverter.from_keras_model_file('anil.h5')
+model.save('anil_extended.h5')
+converter = tf.lite.TFLiteConverter.from_keras_model_file('anil_extended.h5')
 tflite_model = converter.convert()
-open('anil.tflite', 'wb').write(tflite_model)
+open('anil_extended.tflite', 'wb').write(tflite_model)
 
 # convert the history.history dict to a pandas DataFrame:
 hist_df = pd.DataFrame(history.history)
