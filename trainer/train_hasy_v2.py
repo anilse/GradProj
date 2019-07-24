@@ -29,7 +29,7 @@ CLASSES = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '
 NUM_CLASSES = len(CLASSES)              # The number of classes
 IMG_SIZE = 32                          # Pixel-Width of images
 BATCH_SIZE = 128	                    # The number of images to process during a single pass
-EPOCHS = 150	                            # The number of times to iterate through the entire training set
+EPOCHS = 75	                            # The number of times to iterate through the entire training set
 IMG_ROWS, IMG_COLS = IMG_SIZE, IMG_SIZE # Input Image Dimensions
 DATA_UTILIZATION = 1                    # Fraction of data which is utilized in training and testing
 VALIDATION_SPLIT = 0.2
@@ -161,11 +161,11 @@ lr_decay = lambda epoch: 0.0001 + 0.02 * math.pow(1.0 / math.e, epoch / 3.0)
 decay_callback = LearningRateScheduler(lr_decay, verbose=1)
 
 history = model.fit(x_train, y_train, batch_size=BATCH_SIZE, epochs=EPOCHS, verbose=1,
-                    validation_data=(x_test, y_test), callbacks=[decay_callback])
-model.save('anil_hasyv2.h5')
-converter = tf.lite.TFLiteConverter.from_keras_model_file('anil_extended.h5')
+                    validation_split=0.2, callbacks=[decay_callback])
+model.save('anil_hasyv2_inverted.h5')
+converter = tf.lite.TFLiteConverter.from_keras_model_file('anil_hasyv2_inverted.h5')
 tflite_model = converter.convert()
-open('anil_hasyv2.tflite', 'wb').write(tflite_model)
+open('anil_hasyv2_inverted_split.tflite', 'wb').write(tflite_model)
 
 # convert the history.history dict to a pandas DataFrame:
 hist_df = pd.DataFrame(history.history)
