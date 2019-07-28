@@ -34,7 +34,7 @@ IMG_ROWS, IMG_COLS = IMG_SIZE, IMG_SIZE # Input Image Dimensions
 DATA_UTILIZATION = 1                    # Fraction of data which is utilized in training and testing
 VALIDATION_SPLIT = 0.2
 DATA_FOLDER = "final_dataset"
-NAME = "withoutphdmodelv7"
+NAME = "withoutphdmodelv11"
 TEST_RATIO = 0.1
 
 # Define function to read images from folder and convert them to gray scale
