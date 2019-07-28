@@ -33,6 +33,9 @@ public class ImageProcessor {
     ArrayList<RoiObject> mRoiImages = new ArrayList<>(50);
     String mResultText;
     String mProbText;
+    double otsu;
+    public static final String[] symbols = {"+", "-", "x", "/"};
+
     // Amplify the region of interest by making the number bright and
     // background black. This removes noise due to shadows / insufficient lighting.
     // Used otsu thresholding for best result.
@@ -40,7 +43,7 @@ public class ImageProcessor {
         Size sz = new Size(640, 480);
         ArrayList<Rect> rects;
         Rect rect;
-        double otsu;
+
         int top,bottom,left,right;
         Bitmap.Config conf = Bitmap.Config.ARGB_8888; // see other conf types
         Mat origImageMatrix = new Mat(image.getWidth(), image.getHeight(), CvType.CV_8UC3);
@@ -128,7 +131,11 @@ public class ImageProcessor {
         for (int contourIdx = 0; contourIdx < contours.size(); contourIdx++) {
 
             double contourArea = Imgproc.contourArea(contours.get(contourIdx));
-
+            if ((contourArea < 5000) && (contourArea > 800000)) {
+                Log.d(TAG,"fail boundingbox ContourArea = " + contourArea);
+                continue;
+            }
+            Log.d(TAG,"pass bounding box ContourArea = " + contourArea);
             MatOfPoint2f approxCurve = new MatOfPoint2f();
             MatOfPoint2f contour2f = new MatOfPoint2f(contours.get(contourIdx).toArray());
             //Processing on mMOP2f1 which is in type MatOfPoint2f
@@ -175,13 +182,13 @@ public class ImageProcessor {
             double contourArea = Imgproc.contourArea(contours.get(contourIdx));
 
             // Filter out unwanted contour areas
-            Log.d(TAG,"check ContourArea = " + contourArea);
+            Log.d(TAG,"check ContourArea = " + contourArea + " counter num: " + contourIdx );
 
-            if (contourArea < 5000.0 && contourArea > 800000.0) {
-                Log.d(TAG,"fail ContourArea = " + contourArea);
+            if ((contourArea < 5000.0) && (contourArea > 800000.0)) {
+                Log.v(TAG,"fail ContourArea = " + contourArea + " counter num: " + contourIdx );
                 continue;
             }
-            Log.d(TAG,"pass ContourArea = " + contourArea);
+            Log.v(TAG,"pass ContourArea = " + contourArea + " counter num: " + contourIdx );
 
             MatOfPoint2f approxCurve = new MatOfPoint2f();
             MatOfPoint2f contour2f = new MatOfPoint2f(contours.get(contourIdx).toArray());
@@ -197,6 +204,7 @@ public class ImageProcessor {
             Rect rect = Imgproc.boundingRect(points);
             Imgproc.rectangle(origImageMatrix, new Point(rect.x, rect.y), new Point(rect.x + rect.width, rect.y + rect.height), new Scalar(0, 255, 0, 255), 3);
             if ((rect.y + rect.height > origImageMatrix.rows()) || (rect.x + rect.width > origImageMatrix.cols())) {
+                Log.v(TAG, "Eliminate due to discrepancy between origimage and processed one !!!!! ");
                 continue;
             }
 
@@ -204,7 +212,7 @@ public class ImageProcessor {
             MatOfDouble matStd = new MatOfDouble();
             Double mean;
 
-            roiImage = imgToProcess.submat(rect.y,rect.y + rect.height ,rect.x,rect.x + rect.width );
+            roiImage = imgToProcess.submat(rect.y ,rect.y + rect.height , rect.x,rect.x + rect.width );
             int xCord = rect.x;
             Core.copyMakeBorder(roiImage, roiImage, 100, 100, 100, 100, Core.BORDER_ISOLATED);
 
@@ -215,7 +223,7 @@ public class ImageProcessor {
 
             Core.meanStdDev(roiImage, matMean, matStd);
             mean = matMean.toArray()[0];
-            Imgproc.threshold(roiImage, roiImage, mean, 255, Imgproc.THRESH_BINARY_INV);
+            Imgproc.threshold(roiImage, roiImage, 0, 255, Imgproc.THRESH_BINARY_INV);
             Bitmap tempImage = Bitmap.createBitmap(roiImage.cols(), roiImage.rows(), conf);
             Utils.matToBitmap(roiImage, tempImage);
             RoiObject roiObject = new RoiObject(xCord,tempImage);
@@ -226,7 +234,7 @@ public class ImageProcessor {
         Collections.sort(mRoiImages);
 
         //Set the max number of digits to read to 9 (arbitrarily chosen)
-        int max = (mRoiImages.size() > 9) ? 9 : mRoiImages.size();
+        int max = (mRoiImages.size() > 20) ? 20 : mRoiImages.size();
         for (int i = 0; i < max; i++) {
             RoiObject roi = mRoiImages.get(i);
 
@@ -245,6 +253,12 @@ public class ImageProcessor {
                 case 13:
                     ResultExpression.append("/");
                     break;
+                case 14:
+                    ResultExpression.append("(");
+                    break;
+                case 15:
+                    ResultExpression.append(")");
+                    break;
                 default:
                     ResultExpression.append(label);
                     break;
@@ -255,7 +269,7 @@ public class ImageProcessor {
             ProbDigits.append(result.getProbability());
         }
         Log.i(TAG,"Numbers = :" + ResultExpression.toString());
-        mResultText = ResultExpression.toString();
+        mResultText = divDetector(ResultExpression.toString());
         mProbText = ProbDigits.toString();
         return origImageMatrix;
     }
@@ -268,6 +282,47 @@ public class ImageProcessor {
         return this.mProbText;
     }
 
+    public String divDetector(String expression) {
+        int exp_index = 0;
+        int next_index = 0;
+        int prev_index = 0;
+        for (String s : symbols) {
+
+            Log.i(TAG, "s is " + s);
+            if (expression.contains(s))
+            {
+
+                exp_index = expression.indexOf(s);
+                if ((exp_index == 0) && (expression.substring(0,1).equals("-") || expression.substring(0,1).equals("+")))
+                    break;
+                if (exp_index < expression.length())
+                    next_index = exp_index + 1;
+                if(exp_index != 0)
+                    prev_index = exp_index - 1;
+                Log.i(TAG, " 1: " + expression.substring(exp_index, next_index).equals("-")
+                        + " 2: " + (exp_index != 0)
+                        + " 3: " + (exp_index != (expression.length()- 1))
+                        + " 4: " +  ((next_index + 1) <= (expression.length() - 1))
+                        + " expression.substring(exp_index, next_index) is " + expression.substring(exp_index, next_index));
+                if(expression.substring(exp_index, next_index).equals("-") &&
+                                        (exp_index != 0) &&
+                                        ((exp_index != (expression.length()- 1)) &&
+                                        ((next_index + 1) <= (expression.length() - 1)))) {
+
+                    Log.i(TAG, "next string: " + expression.substring(next_index, next_index + 1)
+                    + " next next string: " + expression.substring(next_index + 1, next_index + 2));
+                    if (expression.substring(next_index, next_index + 1).equals("-") &&
+                            expression.substring(next_index + 1, next_index + 2).equals("-")) {
+                        expression = expression.substring(0, exp_index) + "/" + expression.substring(exp_index + 3);
+                        Log.i(TAG, "/  detected! New exp: " + expression);
+                    }
+                }
+
+            }
+
+        }
+        return expression;
+    }
     private ArrayList<Rect> filterRectangles(ArrayList<Rect> rects) {
         double sum = 0.0;
         double mean = 0.0;
@@ -279,8 +334,8 @@ public class ImageProcessor {
         Log.d(TAG, "Mean height = " + mean);
 
         for (int i = 0; i < rects.size(); i++) {
-            if (rects.get(i).height < (mean - 5.0)) {
-                Log.i(TAG, "Removed " + i + " because of its height: " + rects.get(i).height);
+            if (rects.get(i).height < (mean - 30.0)) {
+                Log.i(TAG, "Removed " + i + " because of its height: " + rects.get(i).height + "mean is: " + mean);
                 rects.remove(i);
             }
         }

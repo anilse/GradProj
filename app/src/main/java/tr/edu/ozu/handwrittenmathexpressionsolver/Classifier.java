@@ -22,13 +22,13 @@ import java.util.Arrays;
 public class Classifier {
     private static final String LOG_TAG = Classifier.class.getSimpleName();
 
-    private static final String MODEL_NAME = "anil.tflite";
+    private static final String MODEL_NAME = "withoutphdmodelv10.tflite";
 
     private static final int BATCH_SIZE = 1;
     public static final int IMG_HEIGHT = 28;
     public static final int IMG_WIDTH = 28;
     private static final int NUM_CHANNEL = 1;
-    private static final int NUM_CLASSES = 14;
+    private static final int NUM_CLASSES = 16;
 
     private final Interpreter.Options options = new Interpreter.Options();
     private final Interpreter mInterpreter;

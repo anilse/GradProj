@@ -82,21 +82,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(tr.edu.ozu.multinumberdetector.R.layout.activity_main);
-        //Uncomment this section to locally test openCV / detector interface without calling camera
-        /*
-        Bitmap origImage = BitmapFactory.decodeResource(this.getResources(), R.drawable.photo2);
-        Bitmap bitmap = BitmapFactory.decodeResource(this.getResources(), R.drawable.photo2);
-
-        Mat imgToProcess = mImgProcessor.preProcessImage(bitmap);
-        Bitmap.createScaledBitmap(bitmap,imgToProcess.width(),imgToProcess.height(),false);
-        Bitmap.createScaledBitmap(origImage,imgToProcess.width(),imgToProcess.height(),false);
-        savePhoto(bitmap,"photo.jpg");
-        Utils.matToBitmap(imgToProcess,bitmap);
-        savePhoto(bitmap,"photo_preprocess.jpg");
-        Mat boundImage = mImgProcessor.segmentAndDetect(imgToProcess,origImage,mDetector);
-        Utils.matToBitmap(boundImage,bitmap);
-        savePhoto(bitmap,"photo_bound.jpg");
-        */
 		init();
         mResultText = (TextView) findViewById(tr.edu.ozu.multinumberdetector.R.id.text_result);
         mProbText = (TextView) findViewById(tr.edu.ozu.multinumberdetector.R.id.text_prob);
@@ -119,9 +104,10 @@ public class MainActivity extends AppCompatActivity {
                         shouldCalculate = false;
                         probText = mImgProcessor.getProbText();
                         int next;
-
+                        expression = mImgProcessor.getResultText();
                         for (String s : symbols) {
-                            expression = mImgProcessor.getResultText();
+
+                            Log.i(TAG, "s is " + s);
                             if (expression.contains(s))
                             {
 
@@ -135,6 +121,11 @@ public class MainActivity extends AppCompatActivity {
                                 // division tweak. not a good solution to detect division sign but I found it hard to reconfigure contour area of the symbol.
                                 // it always detects --- when sorted. So, a temporary solution for demo.
                                 // TO-DO: find a way to detect total contour area of div sign.
+                                Log.i(TAG, "1: " + expression.substring(exp_index, next_index).equals("-")
+                                + " 2: " + (exp_index != 0)
+                                + " 3: " + (exp_index != (expression.length()- 1))
+                                + " 4: " +  ((next_index + 1) <= (expression.length() - 1))
+                                + " expression.substring(exp_index, next_index) is " + expression.substring(exp_index, next_index));
                                 if(expression.substring(exp_index, next_index).equals("-") &&
                                         (exp_index != 0) &&
                                         ((exp_index != (expression.length()- 1)) &&
@@ -154,11 +145,12 @@ public class MainActivity extends AppCompatActivity {
                                     break;
                                 }
                                 //Log.i(TAG, "contains the symbol:" + s + "with index" + exp_index + "next: " + mImgProcessor.getResultText().substring(next_index) + " prev:" + mImgProcessor.getResultText().substring(prev_index, exp_index) );
-                                if((Integer.parseInt(expression.substring(next_index, next_index +1)) < 10) &&
+/*                                if((Integer.parseInt(expression.substring(next_index, next_index +1)) < 10) &&
                                         (Integer.parseInt(expression.substring(prev_index, exp_index)) < 10)) {
                                     shouldCalculate = true;
-                                    break;
-                                }
+                                    //break;
+                            }*/
+                                shouldCalculate = true;
                             }
                             else {
                                 resultText = "There are only digits. Detections are: " + expression;
@@ -171,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
                                 calculate = expression.substring(0,exp_index)+'*'+expression.substring(exp_index+1);
                             }
                             try {
+                                Log.i(TAG, "Calculation is: " + calculate);
                                 exp_result = (double) engine.eval(calculate);
                                 resultText = "Detected expression: " + expression + " equals:" + exp_result;
                             } catch (ScriptException e) {
