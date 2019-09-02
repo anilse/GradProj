@@ -1,4 +1,4 @@
-# GradProj
+# Handwritten four operations calculator using CNN
 
 A handwritten equation translator and calculator with classification space: [0-9], +,-,x,traditional division sign and parantheses.
 
